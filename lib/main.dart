@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'Screens/welcome_screen.dart';
 import 'Screens/login_screen.dart';
 import 'Screens/chat_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(FlashChat());
 }
 
